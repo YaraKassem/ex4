@@ -50,6 +50,11 @@ void Player::heal(int healAmount)
     }
 }
 
+int Player::getCoins() const
+{
+    return this->m_coins;
+}
+
 void Player::damage(int damageAmount)
 {
     if (damageAmount > 0)
@@ -75,6 +80,20 @@ void Player::addCoins(int addition)
     }
 }
 
+ const std::string Player::getName() const
+ {
+    return this->m_name;
+ }
+
+void Player::damageForce(int amount)
+{
+    this->m_force -= amount;
+    if(this->m_force < 0)
+    {
+        this->m_force = 0;
+    }
+}
+
 bool Player::pay(int coinsAmount)
 {
     if (this->m_coins < coinsAmount)
@@ -94,7 +113,8 @@ int Player::getAttackStrength() const
     return (this->m_force + this->m_level);
 }
 
-// std::ostream& operator<<(std::ostream& os, const Player& player)
-// {
-//     printPlayerDetails(os, player.m_name, player.m_job, player.m_level, player.m_force, player.m_healthPoints, player.m_coins);
-// }
+std::ostream& operator<<(std::ostream& os, const Player& player)
+{
+    player.print(os);
+    //printPlayerDetails(os, player.m_name, player.m_job, player.m_level, player.m_force, player.m_healthPoints, player.m_coins);
+}

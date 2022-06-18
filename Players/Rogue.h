@@ -1,5 +1,5 @@
-#ifndef EX2_ROGUE_H
-#define EX2_ROGUE_H
+#ifndef EX4_ROGUE_H
+#define EX4_ROGUE_H
 
 #include "Player.h" 
 
@@ -15,9 +15,18 @@ class Rogue : public Player
     // adds double the amount of the coins
     void addCoins(int addition) override;
 
-    friend std::ostream& operator<<(std::ostream& os, const Player& player) override;
+    //only prints
+    void pitfall() override ;
+
+    //decreases HP by 10 and prints
+    void barFight() override;
+
+    //prints
+    void fairyEncounter() override;
+
+    void print(std::ostream& os) const override;
     
-}
+};
 
 #endif
 

@@ -10,7 +10,24 @@ void Rogue::addCoins(int addition)
     }
 }
 
-std::ostream &operator<<(std::ostream &os, const Player &player)
+void Rogue::print(std::ostream& os) const
 {
-    printPlayerDetails(os, player.m_name, "Rogue", player.m_level, player.m_force, player.m_healthPoints, player.m_coins);
+    printPlayerDetails(os, this->m_name, "Rogue", this->m_level, this->m_force, this->m_healthPoints, this->m_coins);
+}
+
+void Rogue::pitfall()
+{
+    printPitfallMessage(true);
+}
+
+void Rogue::barFight() 
+{
+    this->damage(10);
+    printBarfightMessage(false);
+}
+
+    
+void Rogue::fairyEncounter() 
+{
+    printFairyMessage(false);
 }

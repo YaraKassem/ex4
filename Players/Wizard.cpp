@@ -14,7 +14,27 @@ void Wizard::heal(int healAmount)
     }
 }
 
-std::ostream &operator<<(std::ostream &os, const Player &player)
+void Wizard::print(std::ostream& os) const
 {
-    printPlayerDetails(os, player.m_name, "Wizard", player.m_level, player.m_force, player.m_healthPoints, player.m_coins);
+    printPlayerDetails(os, this->m_name, "Wizard", this->m_level, this->m_force, this->m_healthPoints, this->m_coins);
+}
+
+void Wizard::pitfall()
+{
+    this->damage(10);
+    printPitfallMessage(false);
+    //do we need to prind end of card?
+}
+
+void Wizard::barFight() 
+{
+    this->damage(10);
+    printBarfightMessage(false);
+}
+
+    
+void Wizard::fairyEncounter() 
+{
+    this->heal(10);
+    printFairyMessage(true);
 }

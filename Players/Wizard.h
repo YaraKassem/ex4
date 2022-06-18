@@ -1,5 +1,5 @@
-#ifndef EX2_WIZARD_H
-#define EX2_WIZARD_H
+#ifndef EX4_WIZARD_H
+#define EX4_WIZARD_H
 
 #include "Player.h"
 
@@ -15,8 +15,16 @@ class Wizard : public Player
     // adds double the amount of the healAmount
     void heal(int healAmount) override;
 
-    friend std::ostream& operator<<(std::ostream& os, const Player& player) override;
-    
-}
+    //decreases HP by 10 and prints
+    void pitfall() override ;
+
+    //decreases HP by 10 and prints
+    void barFight() override;
+
+    //increases HP by 20 and prints
+    void fairyEncounter() override;
+
+    void print(std::ostream& os) const override;
+};
 
 #endif

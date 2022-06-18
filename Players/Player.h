@@ -1,5 +1,5 @@
-#ifndef EX2_PLAYER_H
-#define EX2_PLAYER_H
+#ifndef EX4_PLAYER_H
+#define EX4_PLAYER_H
 
 #include <string.h>
 
@@ -21,7 +21,7 @@ class Player
     public:
     // c'tor
     Player(const std::string& m_name, const std::string& m_job);
-    
+
     //copy c'tor
     Player(const Player& player) = default;
 
@@ -29,7 +29,7 @@ class Player
     Player& operator=(const Player& other) = default;
 
     //d'tor
-    virual ~Player() = default;
+    virtual ~Player() = default;
     
     //bumps the player's level by 1
     void levelUp();
@@ -46,6 +46,24 @@ class Player
     //damages players by damageAmount
     void damage(int damageAmount);
 
+    //lowers force by amount
+    void damageForce(int amount);
+
+    //returns the name
+    const std::string getName() const;
+
+    //returns the coins amount
+    int getCoins() const;
+
+    //lowers 10 from HP unless it's rogue
+    virtual void pitfall() = 0;
+
+    //lowers 10 from HP unless it's fighter
+    virtual void barFight() = 0;
+
+    //adds 10 only to wizard
+    virtual void fairyEncounter() = 0;
+
     //if healthPoints is 0 returns true - is knocked out
     bool isKnockedOut() const;
 
@@ -58,8 +76,11 @@ class Player
     // returns attack strength which is level + force
     virtual int getAttackStrength() const;
     
+    //pure virtual , print according to type
+    virtual void print(std::ostream& os) const = 0;
+
     //printing operator
-    friend virtual std::ostream& operator<<(std::ostream& os, const Player& player) = 0;
+    friend std::ostream& operator<<(std::ostream& os, const Player& player);
 };
 
 #endif //EX2_Player_H

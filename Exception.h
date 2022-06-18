@@ -7,5 +7,7 @@
 
 class InvalidPlayerName: public std::exception {};
 
+class InvalidCardName: public std::exception {};
+
 
 #endif
