@@ -2,7 +2,8 @@
 #define EX2_PLAYER_H
 
 #include <string.h>
-#include "utilities.h"
+
+#include "../utilities.h"
 
 
 class Player
@@ -19,13 +20,16 @@ class Player
 
     public:
     // c'tor
-    Player(const std::string& m_name, const std::string& m_job, int m_maxHP = 100, int m_force = 5);
+    Player(const std::string& m_name, const std::string& m_job);
+    
     //copy c'tor
     Player(const Player& player) = default;
+
     //assignment operator
     Player& operator=(const Player& other) = default;
+
     //d'tor
-    ~Player() = default;
+    virual ~Player() = default;
     
     //bumps the player's level by 1
     void levelUp();
@@ -37,7 +41,7 @@ class Player
     void buff(int buffAmount);
     
     //heals player's HP by healAmount
-    void heal(int healAmount);
+    virtual void heal(int healAmount);
 
     //damages players by damageAmount
     void damage(int damageAmount);
@@ -46,16 +50,16 @@ class Player
     bool isKnockedOut() const;
 
     //adds coins
-    void addCoins(int addition);
+    virtual void addCoins(int addition);
 
     //performs payment and returns true if it succeeds or false if it fails
     bool pay(int coinsAmount);
 
     // returns attack strength which is level + force
-    int getAttackStrength() const;
+    virtual int getAttackStrength() const;
     
     //printing operator
-    friend std::ostream& operator<<(std::ostream& os, const Player& player);
+    friend virtual std::ostream& operator<<(std::ostream& os, const Player& player) = 0;
 };
 
 #endif //EX2_Player_H

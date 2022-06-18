@@ -1,17 +1,7 @@
 #include "Player.h"
 
-Player::Player(const std::string &name, const std::string &job, int maxHP, int force) : m_name(name),m_job(job),m_level(1), m_maxHP(maxHP), m_force(force), m_healthPoints(maxHP), m_coins(10)
+Player::Player(const std::string &name, const std::string &job) : m_name(name),m_job(job),m_level(1),m_maxHP(100), m_force(5), m_coins(10)
 {
-    if (maxHP <= 0)
-    {
-        this->m_maxHP = 100;
-    }
-
-    if (force <= 0)
-    {
-        this->m_force = 5;
-    }
-
     if( name.size() > 15)
     {
         throw InvalidPlayerName();
@@ -26,7 +16,6 @@ Player::Player(const std::string &name, const std::string &job, int maxHP, int f
     }
     
 }
-
 
 void Player::levelUp()
 {
@@ -105,7 +94,7 @@ int Player::getAttackStrength() const
     return (this->m_force + this->m_level);
 }
 
-std::ostream& operator<<(std::ostream& os, const Player& player)
-{
-    printPlayerDetails(os, player.m_name, player.m_job, player.m_level, player.m_force, player.m_healthPoints, player.m_coins);
-}
+// std::ostream& operator<<(std::ostream& os, const Player& player)
+// {
+//     printPlayerDetails(os, player.m_name, player.m_job, player.m_level, player.m_force, player.m_healthPoints, player.m_coins);
+// }
