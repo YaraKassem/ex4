@@ -12,6 +12,9 @@ class Vampire : public BattleCard
     //copy c'tor = and clone;
     
     void applyEncounter(Player &player) const override;
+
+    //forces loss
+    void forceDamage(Player &player) const override;
 };
 
 #endif

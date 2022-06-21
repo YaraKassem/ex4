@@ -19,6 +19,8 @@ class BattleCard : public Card
     virtual ~BattleCard() = default;
     //copy c'tor = and clone
     virtual void applyEncounter(Player &player) const override;
+    virtual bool applyEncounterGang(Player &player) const;
+    virtual void forceDamage(Player &player) const;
     void print(std::ostream& os) const;
 };
 

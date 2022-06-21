@@ -14,13 +14,20 @@ void Vampire::applyEncounter(Player &player) const
     {
         player.levelUp();
         player.addCoins(this->m_loot);
+        printWinBattle(player.getName(), this->m_name);
     }
 
     else
     {
+        player.damageForce(FORCE_LOSS);
         player.damage(this->m_damage);
-        //what happens if player dies
+        printLossBattle(player.getName(), this->m_name);
     }
+}
 
+void BattleCard::forceDamage(Player &player) const
+{
     player.damageForce(FORCE_LOSS);
+    player.damage(this->m_damage);
+    printLossBattle(player.getName(), this->m_name);
 }
