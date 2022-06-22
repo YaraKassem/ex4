@@ -17,6 +17,11 @@ Player::Player(const std::string &name, const std::string &job) : m_name(name),m
     
 }
 
+int Player::getHP() const
+{
+    return this->m_healthPoints;
+}
+
 void Player::levelUp()
 {
     if (this->m_level < 10)
@@ -117,4 +122,5 @@ std::ostream& operator<<(std::ostream& os, const Player& player)
 {
     player.print(os);
     //printPlayerDetails(os, player.m_name, player.m_job, player.m_level, player.m_force, player.m_healthPoints, player.m_coins);
+    return os;
 }

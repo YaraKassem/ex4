@@ -2,6 +2,7 @@
 #define EX4_WIZARD_H
 
 #include "Player.h"
+#include "../utilities.h"
 
 class Wizard : public Player
 {

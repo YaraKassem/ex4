@@ -2,6 +2,7 @@
 #define EX4_ROGUE_H
 
 #include "Player.h" 
+#include "../utilities.h"
 
 class Rogue : public Player
 {

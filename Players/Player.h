@@ -3,7 +3,7 @@
 
 #include <string.h>
 
-#include "../utilities.h"
+#include "../Exception.h"
 
 
 class Player
@@ -49,6 +49,8 @@ class Player
     //lowers force by amount
     void damageForce(int amount);
 
+    //returns HP
+    int getHP() const;
     //returns the name
     const std::string getName() const;
 
