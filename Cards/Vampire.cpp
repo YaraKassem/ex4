@@ -25,7 +25,7 @@ void Vampire::applyEncounter(Player &player) const
     }
 }
 
-void BattleCard::forceDamage(Player &player) const
+void Vampire::forceDamage(Player &player) const
 {
     player.damageForce(FORCE_LOSS);
     player.damage(this->m_damage);

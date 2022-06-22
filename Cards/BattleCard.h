@@ -14,7 +14,7 @@ class BattleCard : public Card
     int m_damage;
 
     public:
-
+    BattleCard() = default;
     BattleCard(const std::string& name, int force, int loot, int damage);
     virtual ~BattleCard() = default;
     //copy c'tor = and clone

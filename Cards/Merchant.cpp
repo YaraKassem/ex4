@@ -7,11 +7,16 @@ Merchant::Merchant(const std::string &name) : Card(name){}
 
 void Merchant::applyEncounter(Player &player) const 
 {
-    int choice;
+    double choice;
     printMerchantInitialMessageForInteractiveEncounter(std::cout, player.getName(), player.getCoins());
     while(true)
     {
-        scanf("%d",&choice);
+        if(scanf("%f",&choice)!= 1)
+        {
+            printInvalidInput();
+            continue;
+        }
+        
         if(choice == 0 || choice == 1 || choice == 2)
         {
             break;

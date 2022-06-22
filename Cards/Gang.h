@@ -1,5 +1,5 @@
-#ifndef EX4_FAIRY_H
-#define EX4_FAIRY_H
+#ifndef EX4_GANG_H
+#define EX4_GANG_H
 
 #include "BattleCard.h"
 #include <vector>
@@ -11,6 +11,7 @@ class Gang : public Card
 
     public:
 
+    Gang() = default;
     Gang(const std::string& name);
     ~Gang() ;
     //copy c'tor = and clone;

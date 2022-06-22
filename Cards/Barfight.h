@@ -7,6 +7,7 @@ class Barfight : public Card
 {
     public:
 
+    Barfight() = default;
     Barfight(const std::string& name);
     ~Barfight() = default;
     //copy c'tor = and clone;

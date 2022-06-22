@@ -6,7 +6,7 @@
 class Treasure : public Card
 {
     public:
-
+    Treasure() = default;
     Treasure(const std::string& name);
     ~Treasure() = default;
     //copy c'tor = and clone;

@@ -12,7 +12,7 @@ class Card
     std::string m_name;
     
     public:
-
+    Card() = default;
     Card(const std::string& name);
     virtual ~Card() = default;
     //copy c'tor = and clone

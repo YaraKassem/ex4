@@ -6,7 +6,7 @@
 class Dragon : public BattleCard
 {
     public:
-
+    Dragon() = default;
     Dragon(const std::string& name);
     ~Dragon() = default;
     //copy c'tor = and clone

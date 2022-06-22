@@ -7,6 +7,7 @@ class Goblin : public BattleCard
 {
     public:
 
+    Goblin() = default;
     Goblin(const std::string& name);
     ~Goblin() = default;
     //copy c'tor = and clone;
