@@ -22,6 +22,7 @@ Mtmchkin::Mtmchkin(const std::string fileName) : m_numOfRoundsPlayed(0)
             if (addCard(card, &currentGangCard, &inGang) == false)
             {
                 std::string lineCounterStr = std::to_string(lineCounter);
+                clearCards();
                 throw DeckFileFormatError(lineCounterStr);
             }
             else
@@ -40,6 +41,7 @@ Mtmchkin::Mtmchkin(const std::string fileName) : m_numOfRoundsPlayed(0)
                 if (gangAddCard(currentGangCard, card) == false)
                 {
                     std::string lineCounterStr = std::to_string(lineCounter);
+                    clearCards();
                     throw DeckFileFormatError(lineCounterStr);
                 }
             }
@@ -47,10 +49,21 @@ Mtmchkin::Mtmchkin(const std::string fileName) : m_numOfRoundsPlayed(0)
     }
     if (numOfCards < 5)
     {
+        clearCards();
         throw DeckFileInvalidSize();
     }
 
     this->startGame();
+}
+
+void Mtmchkin::clearCards()
+{
+    while (this->m_cards.size() != 0)
+    {
+        Card *currCard = this->m_cards.front();
+        delete currCard;
+        this->m_cards.pop();
+    }
 }
 
 void Mtmchkin::startGame()
@@ -78,23 +91,25 @@ void Mtmchkin::startGame()
             if (type == "Wizard")
             {
                 this->m_players.push_back(new Wizard(name));
+                break;
             }
             else if (type == "Rogue")
             {
                 this->m_players.push_back(new Rogue(name));
+                break;
             }
             else if (type == "Fighter")
             {
                 this->m_players.push_back(new Fighter(name));
+                break;
             }
             else
             {
                 printInvalidClass();
                 continue;
             }
-
-            teamSize--;
         }
+        teamSize--;
     }
 }
 
@@ -102,9 +117,11 @@ void Mtmchkin::checkTeamSize(double &teamSize)
 {
     while (true)
     {
-        if (scanf("%f", &teamSize) != 1)
+        std::cin >> teamSize;
+        if (!std::cin)
         {
             printInvalidTeamSize();
+            printEnterTeamSizeMessage();
             continue;
         }
         else if (teamSize == 2 || teamSize == 3 || teamSize == 4 || teamSize == 5 || teamSize == 6)
@@ -114,6 +131,7 @@ void Mtmchkin::checkTeamSize(double &teamSize)
         else
         {
             printInvalidTeamSize();
+            printEnterTeamSizeMessage();
             continue;
             ;
         }
@@ -123,28 +141,32 @@ void Mtmchkin::checkTeamSize(double &teamSize)
 // does not check if the type is one of the 3 types
 bool Mtmchkin::checkPlayer(std::string &name, std::string &type)
 {
-    if (scanf("%s", name) != 1)
+    std::cin >> name;
+    if (!std::cin)
     {
         printInvalidName();
+        std::cin >> type;
         return false;
     }
 
     else if (name.size() > 15)
     {
         printInvalidName();
+        std::cin >> type;
         return false;
     }
 
     for (std::string::const_iterator it = name.begin(); it != name.end(); it++)
     {
-        if (!(('a' < *it < 'z') || ('A' < *it < 'Z')))
+        if (!(('a' <= *it && *it <= 'z') || ('A' <= *it && *it <= 'Z')))
         {
             printInvalidName();
+            std::cin >> type;
             return false;
         }
     }
-
-    if (scanf("%s", type) != 1)
+    std::cin >> type;
+    if (!std::cin)
     {
         printInvalidClass();
         return false;
@@ -266,10 +288,11 @@ int Mtmchkin::getNumberOfRounds() const
 
 void Mtmchkin::playRound()
 {
+    this->m_numOfRoundsPlayed++;
     printRoundStartMessage(this->m_numOfRoundsPlayed);
     for (std::list<Player *>::iterator it = this->m_players.begin(); it != this->m_players.end(); it++)
     {
-        if ((*it)->getLevel() != 10 && (*it)->getHP() == 0)
+        if ((*it)->getLevel() != 10 && (*it)->getHP() != 0)
         {
             printTurnStartMessage((*it)->getName());
             Card *currCard = this->m_cards.front();
@@ -295,27 +318,28 @@ void Mtmchkin::playRound()
             return;
         }
     }
-    this->m_numOfRoundsPlayed++;
 }
 
 void Mtmchkin::printLeaderBoard() const
 {
     printLeaderBoardStartMessage();
     int i = 0;
-    for (i; i < this->m_winners.size(); i++)
+    int size = this->m_winners.size();
+    for (; i < size; i++)
     {
         printPlayerLeaderBoard(i + 1, *(this->m_winners[i]));
     }
 
     for (std::list<Player *>::const_iterator it = this->m_players.begin(); it != this->m_players.end(); it++)
     {
-        if ((*it)->getLevel() != 10 && (*it)->getHP() == 0)
+        if ((*it)->getLevel() != 10 && (*it)->getHP() != 0)
         {
             printPlayerLeaderBoard(i + 1, *(*it));
             i++;
         }
     }
-    for (int j = this->m_losers.size() - 1; j >= 0; j--)
+    size = this->m_losers.size();
+    for (int j = size - 1; j >= 0; j--)
     {
         printPlayerLeaderBoard(i + 1, *(this->m_losers[j]));
         i++;

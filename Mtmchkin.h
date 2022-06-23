@@ -20,6 +20,7 @@ class Mtmchkin
 
     bool addCard(std::string &card, Gang **currentGangCard, bool* inGang);
     void startGame();
+    void clearCards();
 
 public:
     /*
