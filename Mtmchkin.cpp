@@ -2,7 +2,7 @@
 
 Mtmchkin::Mtmchkin(const std::string fileName) : m_numOfRoundsPlayed(0)
 {
-    // if there is a problem with the cards , do we print anything else?
+     printStartGameMessage();
     std::ifstream file(fileName);
     if (file.fail())
     {
@@ -47,6 +47,15 @@ Mtmchkin::Mtmchkin(const std::string fileName) : m_numOfRoundsPlayed(0)
             }
         }
     }
+
+    if(inGang == true)
+    {
+        lineCounter++;
+        std::string lineCounterStr = std::to_string(lineCounter);
+        clearCards();
+        throw DeckFileFormatError(lineCounterStr);
+    }
+
     if (numOfCards < 5)
     {
         clearCards();
@@ -68,7 +77,6 @@ void Mtmchkin::clearCards()
 
 void Mtmchkin::startGame()
 {
-    printStartGameMessage();
     printEnterTeamSizeMessage();
     double teamSize;
 
@@ -117,14 +125,30 @@ void Mtmchkin::checkTeamSize(double &teamSize)
 {
     while (true)
     {
-        std::cin >> teamSize;
-        if (!std::cin)
+        std::string line;
+        std::getline(std::cin, line);
+         if (line.empty())
+        {
+             printInvalidTeamSize();
+            printEnterTeamSizeMessage();
+            continue;
+        }
+        if (!checkIfLineIsANumber(line))
         {
             printInvalidTeamSize();
             printEnterTeamSizeMessage();
             continue;
         }
-        else if (teamSize == 2 || teamSize == 3 || teamSize == 4 || teamSize == 5 || teamSize == 6)
+        try
+        {
+            teamSize = std::stod(line);
+        }
+        catch (const std::out_of_range &e)
+        {
+            printInvalidInput();
+            continue;
+        }
+        if (teamSize == 2 || teamSize == 3 || teamSize == 4 || teamSize == 5 || teamSize == 6)
         {
             return;
         }
@@ -138,21 +162,33 @@ void Mtmchkin::checkTeamSize(double &teamSize)
     }
 }
 
+bool Mtmchkin::getNameAndType(std::string &name, std::string &type)
+{
+    std::string line;
+    std::getline(std::cin, line);
+    std::string space = " ";
+    size_t position = line.find(space);
+    if (position > 15)
+    {
+        return false;
+    }
+    name = line.substr(0, position);
+    type = line.substr(position + 1, line.length());
+    return true;
+}
+
 // does not check if the type is one of the 3 types
 bool Mtmchkin::checkPlayer(std::string &name, std::string &type)
 {
-    std::cin >> name;
-    if (!std::cin)
+
+    if (!getNameAndType(name, type))
     {
         printInvalidName();
-        std::cin >> type;
         return false;
     }
-
     else if (name.size() > 15)
     {
         printInvalidName();
-        std::cin >> type;
         return false;
     }
 
@@ -161,15 +197,8 @@ bool Mtmchkin::checkPlayer(std::string &name, std::string &type)
         if (!(('a' <= *it && *it <= 'z') || ('A' <= *it && *it <= 'Z')))
         {
             printInvalidName();
-            std::cin >> type;
             return false;
         }
-    }
-    std::cin >> type;
-    if (!std::cin)
-    {
-        printInvalidClass();
-        return false;
     }
 
     return true;

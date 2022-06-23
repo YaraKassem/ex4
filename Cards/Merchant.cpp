@@ -1,5 +1,6 @@
 
 #include "Merchant.h"
+#include <limits>
 #define HEALAMOUNT 1
 #define BUFFAMOUNT 1
 
@@ -10,13 +11,13 @@ bool checkIfLineIsANumber(std::string line)
     int size = line.length();
     for (int i = 0; i < size; i++)
     {
-        if (isdigit(line[i]))
+        if (!isdigit(line[i]))
         {
-            return true;
+            return false;
         }
     }
 
-    return false;
+    return true;
 }
 
 void Merchant::applyEncounter(Player &player) const
@@ -26,6 +27,16 @@ void Merchant::applyEncounter(Player &player) const
     printMerchantInitialMessageForInteractiveEncounter(std::cout, player.getName(), player.getCoins());
     while (true)
     {
+        // std::cin >> line;
+
+        // if (std::cin.fail())
+        // {
+        //     //std::getline(std::cin, line);
+        //     //std::cin.clear();
+        //     //std::cin.ignore(std::numeric_limits<std::streamsize>::max(), 1);
+        //     printInvalidInput();
+        //     continue;
+        // }
         std::getline(std::cin, line);
         if (line.empty())
         {
@@ -71,6 +82,7 @@ void Merchant::applyEncounter(Player &player) const
     if ((choice == 1 && player.getCoins() < 5) || (choice == 2 && player.getCoins() < 10))
     {
         printMerchantInsufficientCoins(std::cout);
+        printMerchantSummary(std::cout, player.getName(), choice, 0);
         return;
     }
     int cost = choice * 5;
@@ -79,13 +91,13 @@ void Merchant::applyEncounter(Player &player) const
         player.heal(HEALAMOUNT);
         // we can do assert that it is always true
         player.pay(cost);
-        printMerchantSummary(std::cout, player.getName(), choice, cost);
     }
     else if (choice == 2)
     {
         player.buff(BUFFAMOUNT);
         // we can do assert that it is always true
         player.pay(cost);
-        printMerchantSummary(std::cout, player.getName(), choice, cost);
+        
     }
+    printMerchantSummary(std::cout, player.getName(), choice, cost);
 }

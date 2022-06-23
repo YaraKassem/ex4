@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Mtmchkin.dir/objects.a
+C:\TDM-GCC-64\bin\ar.exe cr CMakeFiles\Mtmchkin.dir/objects.a @CMakeFiles\Mtmchkin.dir\objects1.rsp
+C:\TDM-GCC-64\bin\x86_64-w64-mingw32-g++.exe -g -Wl,--whole-archive CMakeFiles\Mtmchkin.dir/objects.a -Wl,--no-whole-archive -o Mtmchkin.exe -Wl,--out-implib,libMtmchkin.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Mtmchkin.dir\linklibs.rsp

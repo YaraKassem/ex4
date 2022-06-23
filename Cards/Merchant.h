@@ -14,5 +14,5 @@ class Merchant : public Card
     void applyEncounter(Player &player) const override;
     
 };
-
+bool checkIfLineIsANumber(std::string line);
 #endif

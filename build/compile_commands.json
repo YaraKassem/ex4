@@ -1,0 +1,92 @@
+[
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\test.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\test.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/test.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Players\\Player.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Players\\Player.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Players/Player.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Cards\\Card.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Cards\\Card.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Card.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Mtmchkin.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Mtmchkin.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Mtmchkin.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Cards\\Vampire.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Cards\\Vampire.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Vampire.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Cards\\BattleCard.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Cards\\BattleCard.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Cards/BattleCard.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Cards\\Barfight.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Cards\\Barfight.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Barfight.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Cards\\Dragon.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Cards\\Dragon.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Dragon.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Cards\\Fairy.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Cards\\Fairy.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Fairy.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Cards\\Goblin.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Cards\\Goblin.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Goblin.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Cards\\Gang.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Cards\\Gang.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Gang.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Cards\\Merchant.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Cards\\Merchant.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Merchant.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Cards\\Pitfall.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Cards\\Pitfall.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Pitfall.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Cards\\Treasure.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Cards\\Treasure.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Treasure.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Players\\Rogue.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Players\\Rogue.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Players/Rogue.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Players\\Wizard.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Players\\Wizard.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Players/Wizard.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\Players\\Fighter.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\Players\\Fighter.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/Players/Fighter.cpp"
+},
+{
+  "directory": "C:/Users/Yara/Desktop/matam hw4/ex4/build",
+  "command": "C:\\TDM-GCC-64\\bin\\x86_64-w64-mingw32-g++.exe   -g -o CMakeFiles\\Mtmchkin.dir\\utilities.cpp.obj -c \"C:\\Users\\Yara\\Desktop\\matam hw4\\ex4\\utilities.cpp\"",
+  "file": "C:/Users/Yara/Desktop/matam hw4/ex4/utilities.cpp"
+}
+]

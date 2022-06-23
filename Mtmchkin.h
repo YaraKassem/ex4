@@ -17,7 +17,7 @@ class Mtmchkin
     static void checkTeamSize(double &teamSize);
     static bool gangAddCard(Gang *currentGangCard, std::string& card);
     static bool checkPlayer(std::string &name, std::string &type);
-
+    static bool getNameAndType(std::string &name, std::string &type);
     bool addCard(std::string &card, Gang **currentGangCard, bool* inGang);
     void startGame();
     void clearCards();

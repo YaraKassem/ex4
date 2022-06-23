@@ -387,12 +387,12 @@ bool gangTest3()
     return GeneralGameSimulationTest(tmp_file, input, deck, expectedOutputFilename);
 }
 
-bool test10()
+bool test3()
 {
-    std::ifstream t("test10.in");
+    std::ifstream t("test3.in");
     std::stringstream buffer1;
     buffer1 << t.rdbuf();
-    const string tmp_file("temptest10");
+    const string tmp_file("temptest3");
     string input(buffer1.str());
     std::ifstream t11("deck.txt");
     std::stringstream buffer2;
@@ -424,6 +424,6 @@ int main()
     // run_test(gangTest1, "Gang Test 1");
     // run_test(gangTest2, "Gang Test 2");
     // run_test(gangTest3, "Gang Test 3");
-    run_test(test10, "test10");
+    run_test(test3, "test3");
     return 0;
 }

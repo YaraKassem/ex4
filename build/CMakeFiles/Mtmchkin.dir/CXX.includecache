@@ -1,0 +1,212 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Barfight.h
+Card.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Card.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/BattleCard.h
+string
+-
+Card.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Card.h
+../utilities.h
+C:/Users/Yara/Desktop/matam hw4/ex4/utilities.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Card.h
+string
+-
+../Players/Player.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Player.h
+../utilities.h
+C:/Users/Yara/Desktop/matam hw4/ex4/utilities.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Dragon.h
+BattleCard.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/BattleCard.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Fairy.h
+Card.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Card.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Gang.h
+BattleCard.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/BattleCard.h
+vector
+-
+iostream
+-
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Goblin.h
+BattleCard.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/BattleCard.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Merchant.h
+Card.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Card.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Pitfall.h
+Card.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Card.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Treasure.h
+Card.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Card.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Vampire.h
+BattleCard.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/BattleCard.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Exception.h
+iostream
+-
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Headers.h
+Players/Player.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Player.h
+Cards/Card.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Card.h
+Mtmchkin.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Mtmchkin.h
+Cards/Vampire.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Vampire.h
+Cards/BattleCard.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/BattleCard.h
+Cards/Barfight.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Barfight.h
+Cards/Dragon.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Dragon.h
+Cards/Fairy.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Fairy.h
+Cards/Goblin.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Goblin.h
+Cards/Gang.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Gang.h
+Cards/Merchant.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Merchant.h
+Cards/Pitfall.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Pitfall.h
+Cards/Treasure.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Treasure.h
+Players/Rogue.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Rogue.h
+Players/Wizard.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Wizard.h
+Players/Fighter.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Fighter.h
+utilities.h
+C:/Users/Yara/Desktop/matam hw4/ex4/utilities.h
+queue
+-
+vector
+-
+list
+-
+iostream
+-
+fstream
+-
+Exception.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Exception.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Mtmchkin.h
+Headers.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Headers.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Fighter.h
+Player.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Player.h
+../utilities.h
+C:/Users/Yara/Desktop/matam hw4/ex4/utilities.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Player.h
+string.h
+-
+../Exception.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Exception.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Rogue.h
+Player.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Player.h
+../utilities.h
+C:/Users/Yara/Desktop/matam hw4/ex4/utilities.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Wizard.h
+Player.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Player.h
+../utilities.h
+C:/Users/Yara/Desktop/matam hw4/ex4/utilities.h
+
+C:/Users/Yara/Desktop/matam hw4/ex4/test.cpp
+functional
+-
+string
+-
+iostream
+-
+vector
+-
+memory
+-
+Players/Player.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Player.h
+Cards/Card.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Card.h
+Mtmchkin.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Mtmchkin.h
+Cards/Vampire.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Vampire.h
+Cards/Barfight.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Barfight.h
+Cards/Dragon.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Dragon.h
+Cards/Fairy.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Fairy.h
+Cards/Goblin.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Goblin.h
+Cards/Merchant.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Merchant.h
+Cards/Pitfall.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Pitfall.h
+Cards/Treasure.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Cards/Treasure.h
+Players/Rogue.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Rogue.h
+Players/Wizard.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Wizard.h
+Players/Fighter.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Fighter.h
+Exception.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Exception.h
+algorithm
+-
+sstream
+-
+random
+-
+cstdio
+-
+fstream
+-
+cstring
+-
+
+C:/Users/Yara/Desktop/matam hw4/ex4/utilities.h
+iostream
+-
+cstring
+-
+sstream
+-
+functional
+-
+Exception.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Exception.h
+Players/Player.h
+C:/Users/Yara/Desktop/matam hw4/ex4/Players/Player.h
+
