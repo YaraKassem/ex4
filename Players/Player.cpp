@@ -1,6 +1,6 @@
 #include "Player.h"
 
-Player::Player(const std::string &name, const std::string &job) : m_name(name),m_job(job),m_level(1),m_maxHP(100), m_force(5), m_coins(10)
+Player::Player(const std::string &name, const std::string &job) : m_name(name),m_job(job),m_level(1),m_maxHP(100), m_force(5), m_healthPoints(100), m_coins(10)
 {
     if( name.size() > 15)
     {
@@ -9,7 +9,7 @@ Player::Player(const std::string &name, const std::string &job) : m_name(name),m
 
     for(std::string::const_iterator it = name.begin(); it != name.end(); it++)
     {
-         if (!(('a' < *it < 'z') || ('A' < *it < 'Z')))
+         if (!(('a' <= *it  &&  *it <= 'z') || ('A' <= *it   &&  *it <= 'Z')))
         {
             throw InvalidPlayerName();
         }
