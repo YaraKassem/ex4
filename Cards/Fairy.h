@@ -6,8 +6,8 @@
 class Fairy : public Card
 {
     public:
-    Fairy() = default;
-    Fairy(const std::string& name);
+    //Fairy() = default;
+    Fairy(const std::string& name = "");
     ~Fairy() = default;
     //copy c'tor = and clone;
     

@@ -11,8 +11,8 @@ class Gang : public Card
 
     public:
 
-    Gang() = default;
-    Gang(const std::string& name);
+    //Gang() = default;
+    Gang(const std::string& name = "");
     ~Gang() ;
     //copy c'tor = and clone;
 

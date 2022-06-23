@@ -4,4 +4,4 @@
 #define MAX_DAMAGE 100
 
 
-Dragon::Dragon(const std::string& name) : BattleCard(name, ATTACK_POINTS, LOOT, MAX_DAMAGE){}
+Dragon::Dragon(const std::string& name) : BattleCard(ATTACK_POINTS, LOOT, MAX_DAMAGE, name){}

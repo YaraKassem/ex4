@@ -9,7 +9,7 @@ Card::Card(const std::string &name) : m_name(name)
 
     for (std::string::const_iterator it = name.begin(); it != name.end(); it++)
     {
-        if (!(('a' < *it < 'z') || ('A' < *it < 'Z')))
+        if (!(('a' <= *it   &&  *it <= 'z') || ('A' <= *it &&  *it <= 'Z')))
         {
             throw InvalidCardName();
         }
@@ -35,4 +35,9 @@ std::ostream &operator<<(std::ostream &os, const Card &card)
 {
     card.print(os);
     return os;
+}
+
+std::string Card::getName() const
+{
+    return this->m_name;
 }

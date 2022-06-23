@@ -14,8 +14,8 @@ class BattleCard : public Card
     int m_damage;
 
     public:
-    BattleCard() = default;
-    BattleCard(const std::string& name, int force, int loot, int damage);
+    //BattleCard() = default;
+    BattleCard(int force, int loot, int damage, const std::string& name = "");
     virtual ~BattleCard() = default;
     //copy c'tor = and clone
     virtual void applyEncounter(Player &player) const override;

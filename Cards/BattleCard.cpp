@@ -1,8 +1,8 @@
 #include <stdbool.h>
 #include "BattleCard.h"
 
-BattleCard::BattleCard(const std::string &name, int force, int loot, int damage)
-    : Card(name), m_force(force), m_loot(loot), m_damage(damage) {}
+BattleCard::BattleCard(int force, int loot, int damage, const std::string &name)
+    :Card(name), m_force(force), m_loot(loot), m_damage(damage) {}
 // copy c'tor = and clone
 
 void BattleCard::applyEncounter(Player &player) const
@@ -27,7 +27,6 @@ bool BattleCard::applyEncounterGang(Player &player) const
     if (player.getAttackStrength() >= this->m_force)
     {
         player.addCoins(this->m_loot);
-        printWinBattle(player.getName(), this->m_name);
         return true;
     }
 
@@ -43,7 +42,6 @@ bool BattleCard::applyEncounterGang(Player &player) const
 void BattleCard::forceDamage(Player &player) const
 {
     player.damage(this->m_damage);
-    printLossBattle(player.getName(), this->m_name);
 }
 
 void BattleCard::print(std::ostream &os) const

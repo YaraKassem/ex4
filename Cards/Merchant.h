@@ -6,8 +6,8 @@
 class Merchant : public Card
 {
     public:
-    Merchant() = default;
-    Merchant(const std::string& name);
+    //Merchant() = default;
+    Merchant(const std::string& name = "");
     ~Merchant() = default;
     //copy c'tor = and clone;
     

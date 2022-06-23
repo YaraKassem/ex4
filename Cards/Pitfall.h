@@ -6,8 +6,8 @@
 class Pitfall : public Card
 {
     public:
-    Pitfall() = default;
-    Pitfall(const std::string& name);
+   // Pitfall() = default;
+    Pitfall(const std::string& name = "");
     ~Pitfall() = default;
     //copy c'tor = and clone;
     

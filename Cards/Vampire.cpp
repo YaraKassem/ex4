@@ -4,13 +4,13 @@
 #define LOOT 2
 #define DAMAGE 10
 
-Vampire::Vampire(const std::string& name) : BattleCard(name,ATTACK_POINTS, LOOT, DAMAGE){}
+Vampire::Vampire(const std::string& name) : BattleCard(ATTACK_POINTS, LOOT, DAMAGE, name){}
 
  
 
 void Vampire::applyEncounter(Player &player) const 
 {
-    if (player.getAttackStrength() >= this->m_loot)
+    if (player.getAttackStrength() >= this->m_force)
     {
         player.levelUp();
         player.addCoins(this->m_loot);
@@ -29,5 +29,4 @@ void Vampire::forceDamage(Player &player) const
 {
     player.damageForce(FORCE_LOSS);
     player.damage(this->m_damage);
-    printLossBattle(player.getName(), this->m_name);
 }
